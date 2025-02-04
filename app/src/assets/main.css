@@ -21,10 +21,10 @@ a,
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1000px) {
   body {
     display: flex;
-    place-items: center;
+   
   }
 
   #app {
