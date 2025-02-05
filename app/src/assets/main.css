@@ -1,30 +1,32 @@
 @import './base.css';
 
+/* General Styles */
 #app {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   font-weight: normal;
+  font-family: 'Inter', sans-serif; /* Ensure font is applied */
 }
 
 a,
 .green {
   text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
+  color: var(--pokemon-green); /* Pokémon green color for links */
   transition: 0.4s;
   padding: 3px;
 }
 
 @media (hover: hover) {
   a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
+    background-color: var(--pokemon-green); /* Hover effect with Pokémon green */
   }
 }
 
+/* Grid Layout */
 @media (min-width: 1000px) {
   body {
     display: flex;
-   
   }
 
   #app {
@@ -32,4 +34,79 @@ a,
     grid-template-columns: 1fr 1fr;
     padding: 0 2rem;
   }
+}
+
+/* Pokémon Color Scheme and Card Styling */
+.products {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Ensure the products are displayed side by side */
+  gap: 30px; /* Increased gap for better spacing between cards */
+  margin-top: 30px; /* Increased margin for more space at the top */
+}
+
+.products div {
+  background-color: var(--pokemon-light-bg); /* Light background for cards */
+  border: 3px solid var(--pokemon-red); /* Thicker border with Pokémon red */
+  border-radius: 12px; /* Slightly more rounded corners */
+  padding: 25px; /* Increased padding for more space inside cards */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Larger shadow for a more prominent card */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.products div:hover {
+  transform: scale(1.05); /* Enlarge the card when hovered */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.products div img {
+  width: 100%; /* Make image fill its container */
+  height: auto; /* Keep aspect ratio */
+  max-height: 350px; /* Increase max height to allow for larger images */
+  object-fit: contain; /* Prevent clipping, ensure the image is fully visible */
+  border-radius: 10px;
+  margin-bottom: 15px; /* More space between image and button */
+}
+
+.products div button {
+  background-color: var(--pokemon-blue); /* Button color matches Pokémon theme */
+  color: var(--pokemon-yellow);
+  border: none;
+  padding: 15px; /* Larger button padding */
+  font-size: 18px; /* Larger font size */
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.products div button:hover {
+  background-color: var(--pokemon-green); /* Change to Pokémon green on hover */
+}
+
+h1 {
+  color: var(--pokemon-red); /* Heading with Pokémon red color */
+  font-size: 2.5rem; /* Larger heading */
+  margin-bottom: 30px; /* More space below the heading */
+}
+
+h2 {
+  color: var(--pokemon-blue); /* Cart heading in Pokémon blue */
+  font-size: 1.8rem; /* Slightly larger font for the cart heading */
+  margin-top: 30px;
+}
+
+.cart div {
+  margin-top: 15px;
+  font-size: 1.3rem; /* Increased font size in cart */
+}
+
+.cart div p {
+  color: var(--pokemon-green); /* Cart total in Pokémon green */
+}
+
+/* Empty Cart Message */
+.cart div p {
+  color: var(--pokemon-red); /* Empty cart message in red */
 }
