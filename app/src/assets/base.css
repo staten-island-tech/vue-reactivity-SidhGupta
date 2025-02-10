@@ -1,11 +1,11 @@
 /* Define Pokémon Color Scheme */
 :root {
-  --pokemon-red: #ff0000;
-  --pokemon-blue: #0070ff;
-  --pokemon-green: #00cc00;
-  --pokemon-yellow: #ffcc00;
-  --pokemon-light-bg: #fffae5; /* Light background color for cards */
-  --pokemon-dark-bg: #333333; /* Dark background for card text */
+  --pokemon-blue: #ff0000;
+  --pokemon-red: #0070ff;
+  --pokemon-blue: #00cc00;
+  --pokemon-greem: #ffcc00;
+  --pokemon-dark-bg: #fffae5; /* Light background color for cards */
+  --pokemon-light-bg: #333333; /* Dark background for card text */
 
   /* Use the same color variables in your existing color scheme */
   --color-background: var(--pokemon-light-bg);
@@ -18,10 +18,10 @@
   --color-heading: var(--pokemon-blue);
   --color-text: var(--pokemon-dark-bg);
 
-  --section-gap: 160px;
+  --section-gap: 1.60px;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   :root {
     --color-background: var(--pokemon-dark-bg);
     --color-background-soft: var(--pokemon-dark-bg);
@@ -42,7 +42,7 @@ body, html {
   height: 100%;
   background-color: var(--color-background);
   color: var(--color-text);
-  font-family: Arial, sans-serif;
+  font-family: 'Comic Sans MS', Arial, sans-serif;
 }
 
 /* Make sure the app container takes the full width of the screen */
@@ -93,7 +93,7 @@ button:hover {
 }
 
 /* Additional responsive adjustments (Optional) */
-@media (max-width: 768px) {
+@media (min-width: 768px) {
   .products {
     grid-template-columns: 1fr; /* Stack products vertically on smaller screens */
   }
