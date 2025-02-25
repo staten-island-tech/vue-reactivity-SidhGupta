@@ -151,9 +151,7 @@ export default {
     removeFromCart(index) {
       this.cart.splice(index, 1); // Removes the item at the given index
     },
-    handleCheckout() {
-      alert("NO WAY YOU CLICKED CHECKOUT WHEN YOU KNOW WELL AS HELL THAT THIS IS A MODEL");
-    }
+   
   },
   computed: {
     totalCost() {
